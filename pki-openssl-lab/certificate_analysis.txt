@@ -1,0 +1,24 @@
+Certificate Analysis Report
+
+Target: www.example.com
+Port: 443
+
+Issuer: Cloudflare TLS Issuing ECC CA 1
+Subject: CN=example.com
+
+Key Type: ECDSA (256-bit prime256v1)
+
+Validity Period:
+Not Before: Apr 2 2026
+Not After : Jul 1 2026
+
+Extensions:
+- Basic Constraints: CA:FALSE
+- Key Usage: Digital Signature
+- Extended Key Usage: TLS Web Server Authentication
+- Subject Alternative Name: example.com, *.example.com
+
+Security Notes:
+- Uses modern elliptic curve cryptography (P-256)
+- Certificate is CA-signed
+- Supports wildcard domain
