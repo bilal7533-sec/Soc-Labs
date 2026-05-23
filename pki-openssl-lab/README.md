@@ -28,34 +28,38 @@ openssl s_client -connect www.example.com:443 -showcerts </dev/null 2>/dev/null 
 ```
 
 Step 2: Analyze Certificate Details
+```bash
 openssl x509 -in example_cert.pem -text -noout
+```
 
-🔍 Key Findings
+##🔍 Key Findings
 Certificate Information
 Certificate Type: X.509 v3
 Issuer: Cloudflare TLS Issuing ECC CA 1
 Subject: example.com
-Cryptographic Details
+
+##Cryptographic Details
 Public Key Algorithm: ECDSA (256-bit)
 Signature Algorithm: SHA256 with ECDSA
 Curve: P-256 (Elliptic Curve Cryptography)
-Security Observations
+
+##Security Observations
 Uses modern elliptic curve cryptography (strong security standard)
 Issued by a trusted Certificate Authority (Cloudflare)
 Subject Alternative Names (SAN) support wildcard domains (*.example.com)
 Strong key usage restrictions applied for TLS authentication
 
-🧠 What I Learned
-How HTTPS encryption works using TLS certificates
-How Certificate Authorities establish trust in PKI
-How to extract and analyze SSL certificates using OpenSSL
-How cryptographic algorithms are used in real-world web security
+#🧠 What I Learned
+-How HTTPS encryption works using TLS certificates
+-How Certificate Authorities establish trust in PKI
+-How to extract and analyze SSL certificates using OpenSSL
+-How cryptographic algorithms are used in real-world web security
 
-📊 Security Insight (SOC Perspective)
+#📊 Security Insight (SOC Perspective)
 
 This lab demonstrates how SOC analysts and security engineers inspect SSL certificates to:
 
-Detect misconfigured TLS setups
-Identify weak cryptographic algorithms
-Validate certificate trust chains
-Monitor secure communication between clients and servers
+-Detect misconfigured TLS setups
+-Identify weak cryptographic algorithms
+-Validate certificate trust chains
+-Monitor secure communication between clients and servers
