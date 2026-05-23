@@ -27,10 +27,13 @@ The objective is to understand how HTTPS security works under Public Key Infrast
 openssl s_client -connect www.example.com:443 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM > example_cert.pem
 ```
 
-Step 2: Analyze Certificate Details
+### Step 2: Analyze Certificate Details
 ```bash
 openssl x509 -in example_cert.pem -text -noout
 ```
+```md id="kf1a2b"
+```
+
 
 ##🔍 Key Findings
 Certificate Information
